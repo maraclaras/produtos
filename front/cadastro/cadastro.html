@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+<header class="header">
+    <div class="header-left">
+    <a href="../landing/landing.html">
+      <img src="../landing/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="../sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+
+    <div class="main-container">
+<!-- Lado esquerdo -->
+<div class="welcome-section">
+    <h2>BEM - VINDO</h2>
+    <p>Já possui uma conta?</p>
+    <div class="botao-entrar-wrapper">
+        <button onclick="window.location.pathname ='Codigo/front/login/login.html'">ENTRAR</button>
+    </div>
+    <img src="logo-completo.png" alt="Logo Glayde" class="logo-baixo">
+</div>
+<!---->
+        <!-- Lado direito -->
+        <div class="form-section">
+            <h2>CRIE SUA CONTA</h2>
+            <form id="cadastroForm">
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="nome" placeholder="Nome Completo" required>
+                </div>
+            
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail ou Telefone" required>
+                </div>
+            
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+            
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Confirme sua Senha" required>
+                </div>
+            
+                <button type="submit">CADASTRAR</button>
+            </form>
+            
+            
+        </div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #9AB1AF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+  .header {
+  background-color: #5f8f8f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  height: 100px;
+}
+
+.header-left img {
+  height: 60px;
+}
+
+.header-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
+}
+
+.header-nav a:hover {
+  opacity: 0.8;
+}
+
+.header-right .profile-icon {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.main-container {
+    display: flex;
+    margin: 40px auto;
+    width: 70%;              /* reduzido de 80% para 70% */
+    max-width: 800px;        /* reduzido de 1000px para 800px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCE3E2;
+    padding: 20px;
+    flex: 1;
+}
+
+.logo-box img {
+    width: 150px;
+    height: auto;
+}
+
+.container {
+    text-align: center;
+    width: 400px;
+    background-color: #4D6D6B;
+    padding: 30px; /* Aumentado para mais espaço */
+
+    flex: 1;
+}
+
+h2 {
+    color: #DCE3E2;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #DCE3E2;
+    color: #4D6D6B;
+    border: none;
+    padding: 12px; /* Aumentado para mais conforto */
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+button:hover {
+    background-color: #3a5352; /* tom mais escuro */
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Aumentado para mais conforto */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transição suave para foco */
+    border-radius: 25px;
+}
+
+input:focus {
+    border-color: #4D6D6B; /* Mudança de cor ao focar */
+}
+
+h3 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 5px; /* Espaço abaixo do título */
+    color: #DCE3E2; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte reduzido */
+}
+
+p {
+    color: #DCE3E2;
+}
+
+.separator {
+    width: 100%; /* Largura total */
+    height: 2px; /* Altura da barra */
+    background-color: #DCE3E2; /* Cor da barra */
+    margin: 10px 0; /* Espaço acima e abaixo da barra */
+}
+
+.social-login {
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centralizar os botões horizontalmente */
+    margin-top: 20px; /* Espaço acima da seção */
+}
+
+.social-login button {
+    background-color: #DCE3E2; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Mão para indicar clique */
+    width: 50px; /* Largura fixa para os botões */
+    height: 50px; /* Altura fixa para os botões */
+    display: flex; /* Usar flexbox para centralizar o ícone */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    margin: 0 10px; /* Espaço lateral entre os botões */
+    border-radius: 50%; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para hover */
+    
+}
+
+.social-login button:hover {
+    background-color: #3a5352; /* tom mais escuro */
+    color: #fff;
+}
+
+.social-icon {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Manter a proporção do ícone */
+}
+
+
+
+.link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.link a {
+    color: #DCE3E2;
+    text-decoration: underline;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    margin-top: 10px; /* Espaço acima do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.forgot-password a {
+    color: #DCE3E2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+

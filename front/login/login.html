@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+    <a href="../landing/landing.html">
+      <img src="../landing/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="../sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+    <div class="main-container">
+        <div class="logo-box">
+            <img src="logo.png" alt="Logo do Site">
+        </div>
+
+        <div class="container">
+            <h2>Login</h2>
+            
+            <div id="loginOptions">
+                <button onclick="showClientLogin()">Login como Cliente</button>
+                <button onclick="showAdminLogin()">Login como Administrador</button>
+                <div class="link">
+                    <p>Não tem uma conta? <a href="#" onclick="window.location.pathname ='Codigo/front/cadastro/cadastro.html'"> Cadastre-se aqui</a></p>
+                </div>
+            </div>
+
+            <div id="clientLogin" style="display:none;">
+                <form id="clientForm">
+                    <input type="email" id="clientEmail" placeholder="Email" required><br>
+                    <input type="password" id="clientPassword" placeholder="Senha" required><br>
+                    <button type="submit">Entrar como Cliente</button>
+                    <p class="forgot-password">
+                        <a href="#" onclick="showForgotPassword()">Esqueci minha senha</a>
+                    </p>
+                </form>
+                <button onclick="backToLoginOptions()">Voltar</button>
+            </div>
+            
+            <div id="adminLogin" style="display:none;">
+                <form id="adminForm">
+                    <input type="text" id="adminCpf" placeholder="CPF" required><br>
+                    <input type="password" id="adminPassword" placeholder="Senha" required><br>
+                    <button type="submit">Entrar como Administrador</button>
+                    <p class="forgot-password">
+                        <a href="#" onclick="showForgotPassword()">Esqueci minha senha</a>
+                    </p>
+                </form>
+                <button onclick="backToLoginOptions()">Voltar</button>
+            </div>
+            
+
+    <script src="login.js"></script>
+
+</body>
+</html>

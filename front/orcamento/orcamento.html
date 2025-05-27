@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie seu Bolo</title>
+  <link rel="stylesheet" href="orcamento.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="header-left">
+    <a href="../landing/landing.html">
+      <img src="../landing/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="../sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+
+  <h1>CRIE SEU BOLO</h1>
+  <p style="margin-top: -10px; margin-bottom: 30px; color: #4d7373;">Clique em cada camada do bolo para personalizar</p>
+  <div class="line"></div>
+
+  <div class="container">
+    <div class="cake">
+      <div class="layer layer0" id="layer0" onclick="showOptions(0)" title="Escolha o tamanho do bolo"></div>
+      <div class="layer layer1" id="layer1" onclick="showOptions(1)" title="Escolha o tipo de cobertura e decoração">
+      </div>
+      <div class="layer layer2" id="layer2" onclick="showOptions(2)" title="Escolha o sabor da massa (1 opção)"></div>
+      <div class="layer layer3" id="layer3" onclick="showOptions(3)" title="Escolha até 2 recheios"></div>
+      <div class="layer layer4" id="layer4" onclick="showOptions(4)" title="Escolha um extra para finalizar"></div>
+    </div>
+
+    <div class="options-box" id="optionsBox">
+      <h2 id="optionTitle">Opções</h2>
+      <div id="optionsList"></div>
+    </div>
+  </div>
+
+  <button class="save-btn" id="saveBtn" onclick="saveSelection()" disabled>Salvar</button>
+
+  <script src="orcamento.js"></script>
+</body>
+
+</html>
