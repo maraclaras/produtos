@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    <link rel="stylesheet" href="produtos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="header-left">
+    <a href="../landing/landing.html">
+      <img src="../landing/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="../sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+    <!-- Página de Produtos -->
+    <section id="produtos">
+        <h1>PRODUTOS</h1>
+        <div class="produtos-container">
+            <div class="produto">
+                <img class="Imagem" src="imagens/bolos/bolo11.jpg" alt="Bolo" width="250px" />
+                <button onclick="mostrarSecao('bolos')">BOLOS</button>
+            </div>
+            <div class="produto">
+                <img class="Imagem" src="imagens/doces/doce4.jpg" alt="Doces" width="250px" />
+                <button onclick="mostrarSecao('doces')">DOCES</button>
+            </div>
+            <div class="produto">
+                <img class="Imagem" src="imagens/datas/data1.png" alt="Datas" width="250px" />
+                <button onclick="mostrarSecao('datas')">DATAS COMEMORATIVAS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página de Bolos -->
+    <section id="bolos" class="hidden">
+        <header class="header-categorias">
+            <h1>BOLOS</h1>
+        </header>
+<div class="categorias">
+    <button onmouseover="mostrarPreview('ganache')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/ganache/ganache.html'">GANACHE</button>
+    <button onmouseover="mostrarPreview('pasta')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/pastaAmericana/pastaAmericana.html'">PASTA AMERICANA</button>
+    <button onmouseover="mostrarPreview('chantininho')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/chantininho/chantininho.html'">CHANTININHO</button>
+    <button onmouseover="mostrarPreview('diet')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/linhaDiet/linhaDiet.html'">LINHA DIET</button>
+    <button  onclick="window.location.pathname ='Codigo/front/orcamento/orcamento.html'">CRIE SEU BOLO</button>
+</div>
+
+<!-- Imagem de preview -->
+<div id="preview-bolo" class="preview-bolo hidden">
+    <img id="imagem-preview" src="" alt="Preview do bolo">
+</div>
+
+    </section>
+
+    <!-- Página de Doces -->
+    <section id="doces" class="hidden">
+        <header class="header-categorias">
+            <h1>DOCES</h1>
+        </header>
+        <div class="lista-doces">
+            <div class="doces">
+
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/doces/doce6.png" alt="Brigadeiro" />
+                <button onclick="mostrarDetalhes('Brigadeiro')">EU QUERO</button>
+            </div>
+            <div class="doces">
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/doces/doce3.png" alt="Beijinho" />
+                <button onclick="mostrarDetalhes('Beijinho')">EU QUERO</button>
+            </div>
+            <div class="doces">
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/doces/doce5.jpg" alt="Docinho Gourmet" />
+                <button onclick="mostrarDetalhes('Docinho Gourmet')">EU QUERO</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página de Datas Comemorativas -->
+    <section id="datas" class="hidden">
+        <header class="header-categorias">
+            <h1>DATAS COMEMORATIVAS</h1>
+        </header>
+        <div class="lista-data">
+            <div class="data">
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/datas/data2.png" alt="Natal" />
+                <button onclick="mostrarDetalhes('Natal')">EU QUERO</button>
+            </div>
+            <div class="data">
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/datas/data3.png" alt="Páscoa" />
+                <button onclick="mostrarDetalhes('Páscoa')">EU QUERO</button>
+            </div>
+            <div class="data">
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/datas/data5.png" alt="Páscoa" />
+                <button onclick="mostrarDetalhes('Páscoa')">EU QUERO</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página de Detalhes -->
+    <section id="detalhes" class="hidden">
+        <header class="header-detalhes">
+            <h1 id="nome-bolo">NOME DO BOLO</h1>
+        </header>
+        <div class="detalhes-container">
+            <img src="https://via.placeholder.com/200" alt="Imagem do Bolo" />
+            <div>
+                <p>DESCRIÇÃO DO PRODUTO</p>
+                <div class="estrelas" id="avaliacao">
+                    <span data-estrela="1">☆</span>
+                    <span data-estrela="2">☆</span>
+                    <span data-estrela="3">☆</span>
+                    <span data-estrela="4">☆</span>
+                    <span data-estrela="5">☆</span>
+                </div>
+     <button id="btn-adicionar-carrinho">ADICIONAR AO CARRINHO</button>
+            </div>
+        </div>
+    </section>
+    <!-- Botão para abrir o carrinho -->
+
+<button 
+  id="btn-abrir-carrinho" 
+  title="Ver Carrinho"
+  style="position: fixed; top: 10px; right: 10px; z-index: 1000; font-size: 24px; cursor: pointer;"
+  onclick="window.location.pathname = '/Codigo/front/carrinho/carrinho.html';"
+>
+  🛒
+</button>
+
+    <!-- Painel do Carrinho -->
+    <aside id="carrinho" class="carrinho-hidden" aria-label="Carrinho de compras"
+        style="position: fixed; top: 0; right: 0; width: 350px; height: 100vh; background: white; box-shadow: -4px 0 8px rgba(0,0,0,0.2); padding: 1rem; overflow-y: auto; z-index: 999;">
+        <h2>Carrinho</h2>
+        <ul id="lista-carrinho" style="list-style: none; padding: 0;"></ul>
+        <p id="total-carrinho" style="font-weight: bold;">Total: R$ 0,00</p>
+        <button id="fechar-carrinho" style="margin-top: 1rem; padding: 0.5rem 1rem;">Fechar</button>
+    </aside>
+
+    <script src="produtos.js"></script>
+</body>
+
+</html>

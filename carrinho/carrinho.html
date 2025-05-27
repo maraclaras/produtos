@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="carrinho.css" />
+</head>
+<body>
+<header class="header">
+    <div class="header-left">
+    <a href="../landing/landing.html">
+      <img src="../landing/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="../sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+    <h1>Seu Carrinho</h1>
+    <button onclick="window.location.pathname ='Codigo/front/produtos/produtos.html'">← Continuar Comprando</button>
+  <main>
+    <ul id="lista-carrinho"></ul>
+    <p id="total-carrinho">Total: R$ 0,00</p>
+    <button id="btn-finalizar">Finalizar Compra</button>
+  </main>
+
+  <script src="carrinho.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bolos de Ganache</title>
+  <link rel="stylesheet" href="../produtos.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="/Codigo/front/produtos/logo.png" alt="Logo Glayde Ribeiro" />
+  </header>
+
+  <section id="bolos">
+    <h1>Bolos de Ganache</h1>
+    <div class="lista-bolos">
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo3.png" alt="Ganache 1" />
+        <button onclick="mostrarDetalhes('Ganache 1')">EU QUERO</button>
+      </div>
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo7.jpg" alt="Ganache 2" />
+        <button onclick="mostrarDetalhes('Ganache 2')">EU QUERO</button>
+      </div>
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo13.jpg" alt="Ganache 3" />
+        <button onclick="mostrarDetalhes('Ganache 3')">EU QUERO</button>
+      </div>
+            <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo14.jpg" alt="Ganache 3" />
+        <button onclick="mostrarDetalhes('Ganache 3')">EU QUERO</button>
+      </div>
+            <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo15.jpg" alt="Ganache 3" />
+        <button onclick="mostrarDetalhes('Ganache 3')">EU QUERO</button>
+      </div>
+            <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/imagens/bolos/bolo16.jpg" alt="Ganache 3" />
+        <button onclick="mostrarDetalhes('Ganache 3')">EU QUERO</button>
+      </div>
+    </div>
+  </section>
+
+<script>
+  function mostrarDetalhes(nome) {
+    // Salva o nome do bolo no localStorage e redireciona para a página principal
+    localStorage.setItem("boloSelecionado", nome);
+    window.location.href = "/Codigo/front/produtos/produtos.html"; // Certifique-se de que esse é o caminho correto
+  }
+</script>
+
+</body>
+</html>
