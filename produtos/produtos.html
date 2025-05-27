@@ -26,53 +26,108 @@
     </div>
   </header>
 
-    <!-- Página de Produtos -->
     <section id="produtos">
         <h1>PRODUTOS</h1>
         <div class="produtos-container">
             <div class="produto">
-                <img class="Imagem" src="imagens/bolos/bolo11.jpg" alt="Bolo" width="250px" />
+                <div class="bolo-carousel-container">
+                    <button class="carousel-btn prev" onclick="mudarBoloSlide(-1)">&#10094;</button>
+                    <div class="bolo-carousel-slides">
+                        <div class="bolo-slide">
+                            <img class="Imagem" src="imagens/bolos/bolo9.jpg" alt="Bolo de Chocolate" />
+                        </div>
+                        <div class="bolo-slide">
+                            <img class="Imagem" src="imagens/bolos/bolo8.jpg" alt="Bolo de Morango" />
+                        </div>
+                        <div class="bolo-slide">
+                            <img class="Imagem" src="imagens/bolos/bolo12.jpg" alt="Bolo Decorado" />
+                        </div>
+                         <div class="bolo-slide">
+                            <img class="Imagem" src="imagens/bolos/bolo17.jpg" alt="Bolo de Ganache" />
+                        </div>
+                         <div class="bolo-slide">
+                            <img class="Imagem" src="imagens/bolos/bolo21.jpg" alt="Bolo Diet" />
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="mudarBoloSlide(1)">&#10095;</button>
+                </div>
+                <div class="bolo-carousel-dots">
+                    </div>
                 <button onclick="mostrarSecao('bolos')">BOLOS</button>
             </div>
             <div class="produto">
-                <img class="Imagem" src="imagens/doces/doce4.jpg" alt="Doces" width="250px" />
+                <div class="doces-carousel-container">
+                    <button class="carousel-btn prev" onclick="mudarDocesSlide(-1)">&#10094;</button>
+                    <div class="doces-carousel-slides">
+                        <div class="doces-slide">
+                            <img class="Imagem" src="imagens/doces/doce4.jpg" alt="Doces Sortidos" />
+                        </div>
+                        <div class="doces-slide">
+                            <img class="Imagem" src="imagens/doces/doce6.png" alt="Brigadeiros Deliciosos" />
+                        </div>
+                        <div class="doces-slide">
+                            <img class="Imagem" src="imagens/doces/doce3.png" alt="Beijinhos de Coco" />
+                        </div>
+                         <div class="doces-slide">
+                            <img class="Imagem" src="imagens/doces/doce5.jpg" alt="Docinhos Gourmet" />
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="mudarDocesSlide(1)">&#10095;</button>
+                </div>
+                <div class="doces-carousel-dots">
+                    </div>
                 <button onclick="mostrarSecao('doces')">DOCES</button>
             </div>
             <div class="produto">
-                <img class="Imagem" src="imagens/datas/data1.png" alt="Datas" width="250px" />
+                <div class="datas-carousel-container">
+                    <button class="carousel-btn prev" onclick="mudarDatasSlide(-1)">&#10094;</button>
+                    <div class="datas-carousel-slides">
+                        <div class="datas-slide">
+                            <img class="Imagem" src="imagens/datas/data1.png" alt="Presentes de Natal" />
+                        </div>
+                        <div class="datas-slide">
+                            <img class="Imagem" src="imagens/datas/data2.png" alt="Doces de Natal" />
+                        </div>
+                        <div class="datas-slide">
+                            <img class="Imagem" src="imagens/datas/data3.png" alt="Ovos de Páscoa" />
+                        </div>
+                         <div class="datas-slide">
+                            <img class="Imagem" src="imagens/datas/data5.png" alt="Cestas de Páscoa" />
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="mudarDatasSlide(1)">&#10095;</button>
+                </div>
+                <div class="datas-carousel-dots">
+                    </div>
                 <button onclick="mostrarSecao('datas')">DATAS COMEMORATIVAS</button>
             </div>
         </div>
     </section>
 
-    <!-- Página de Bolos -->
     <section id="bolos" class="hidden">
         <header class="header-categorias">
             <h1>BOLOS</h1>
         </header>
 <div class="categorias">
-    <button onmouseover="mostrarPreview('ganache')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/ganache/ganache.html'">GANACHE</button>
-    <button onmouseover="mostrarPreview('pasta')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/pastaAmericana/pastaAmericana.html'">PASTA AMERICANA</button>
-    <button onmouseover="mostrarPreview('chantininho')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/chantininho/chantininho.html'">CHANTININHO</button>
-    <button onmouseover="mostrarPreview('diet')" onmouseout="esconderPreview()" onclick="window.location.pathname ='Codigo/front/produtos/linhaDiet/linhaDiet.html'">LINHA DIET</button>
-    <button  onclick="window.location.pathname ='Codigo/front/orcamento/orcamento.html'">CRIE SEU BOLO</button>
+    <button onmouseover="mostrarPreview('ganache')" onmouseout="esconderPreview()" onclick="window.location.href ='./ganache/ganache.html'">GANACHE</button>
+    <button onmouseover="mostrarPreview('pasta')" onmouseout="esconderPreview()" onclick="window.location.href ='./pastaAmericana/pastaAmericana.html'">PASTA AMERICANA</button>
+    <button onmouseover="mostrarPreview('chantininho')" onmouseout="esconderPreview()" onclick="window.location.href ='./chantininho/chantininho.html'">CHANTININHO</button>
+    <button onmouseover="mostrarPreview('diet')" onmouseout="esconderPreview()" onclick="window.location.href ='./linhaDiet/linhaDiet.html'">LINHA DIET</button>
+    <button onclick="window.location.href = '../orcamento/orcamento.html'">CRIE SEU BOLO</button>
 </div>
 
-<!-- Imagem de preview -->
 <div id="preview-bolo" class="preview-bolo hidden">
     <img id="imagem-preview" src="" alt="Preview do bolo">
 </div>
 
     </section>
 
-    <!-- Página de Doces -->
     <section id="doces" class="hidden">
         <header class="header-categorias">
             <h1>DOCES</h1>
         </header>
         <div class="lista-doces">
             <div class="doces">
-
                 <img class="Imagem" src="/Codigo/front/produtos/imagens/doces/doce6.png" alt="Brigadeiro" />
                 <button onclick="mostrarDetalhes('Brigadeiro')">EU QUERO</button>
             </div>
@@ -87,7 +142,6 @@
         </div>
     </section>
 
-    <!-- Página de Datas Comemorativas -->
     <section id="datas" class="hidden">
         <header class="header-categorias">
             <h1>DATAS COMEMORATIVAS</h1>
@@ -102,19 +156,18 @@
                 <button onclick="mostrarDetalhes('Páscoa')">EU QUERO</button>
             </div>
             <div class="data">
-                <img class="Imagem" src="/Codigo/front/produtos/imagens/datas/data5.png" alt="Páscoa" />
-                <button onclick="mostrarDetalhes('Páscoa')">EU QUERO</button>
+                <img class="Imagem" src="/Codigo/front/produtos/imagens/datas/data5.png" alt="Páscoa 2" />
+                <button onclick="mostrarDetalhes('Páscoa 2')">EU QUERO</button>
             </div>
         </div>
     </section>
 
-    <!-- Página de Detalhes -->
     <section id="detalhes" class="hidden">
         <header class="header-detalhes">
-            <h1 id="nome-bolo">NOME DO BOLO</h1>
+            <h1 id="nome-bolo">NOME DO PRODUTO</h1>
         </header>
         <div class="detalhes-container">
-            <img src="https://via.placeholder.com/200" alt="Imagem do Bolo" />
+            <img src="https://via.placeholder.com/200" alt="Imagem do Produto" />
             <div>
                 <p>DESCRIÇÃO DO PRODUTO</p>
                 <div class="estrelas" id="avaliacao">
@@ -128,25 +181,15 @@
             </div>
         </div>
     </section>
-    <!-- Botão para abrir o carrinho -->
 
-<button 
-  id="btn-abrir-carrinho" 
+    <button
+  id="btn-abrir-carrinho"
   title="Ver Carrinho"
-  style="position: fixed; top: 10px; right: 10px; z-index: 1000; font-size: 24px; cursor: pointer;"
-  onclick="window.location.pathname = '/Codigo/front/carrinho/carrinho.html';"
+  style="position: fixed; top: 10px; right: 10px; z-index: 1000; font-size: 24px; cursor: pointer; background-color: #5f8f8f; border-radius: 50%; width: 50px; height: 50px; color: white; border: none; box-shadow: 0 0 8px rgba(0,0,0,0.2);"
+  onclick="window.location.href = '../carrinho/carrinho.html';"
 >
   🛒
 </button>
-
-    <!-- Painel do Carrinho -->
-    <aside id="carrinho" class="carrinho-hidden" aria-label="Carrinho de compras"
-        style="position: fixed; top: 0; right: 0; width: 350px; height: 100vh; background: white; box-shadow: -4px 0 8px rgba(0,0,0,0.2); padding: 1rem; overflow-y: auto; z-index: 999;">
-        <h2>Carrinho</h2>
-        <ul id="lista-carrinho" style="list-style: none; padding: 0;"></ul>
-        <p id="total-carrinho" style="font-weight: bold;">Total: R$ 0,00</p>
-        <button id="fechar-carrinho" style="margin-top: 1rem; padding: 0.5rem 1rem;">Fechar</button>
-    </aside>
 
     <script src="produtos.js"></script>
 </body>
