@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bolos da Linha Diet</title>
+  <link rel="stylesheet" href="/Codigo/front/produtos/css/produtos.css" />
+</head>
+<body>
+    <header class="header">
+    <div class="header-left">
+    <a href="/Codigo/front/landing/landing.html">
+      <img src="/Codigo/front/produtos/logo.png" alt="Logo Confeitaria Glayde">
+    </a>
+  </div>
+    <nav class="header-nav">
+      <a href="/Codigo/front/produtos/html/produtos.html">Produtos</a>
+      <a href="/Codigo/front/orcamento/orcamento.html">Bolo Personalizado</a>
+      <a href="/Codigo/front/sobre/sobre.html">Sobre</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+  <section>
+    <h1>Bolos da Linha Diet</h1>
+    <div class="lista-bolos">
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/html/linhaDiet/bolo22.jpg" alt="Linha Diet 1" />
+        <button onclick="mostrarDetalhes('Linha Diet 1')">EU QUERO</button>
+      </div>
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/html/linhaDiet/bolo23.jpg" alt="Linha Diet 2" />
+        <button onclick="mostrarDetalhes('Linha Diet 2')">EU QUERO</button>
+      </div>
+      <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/html/linhaDiet/bolo27.jpg" alt="Linha Diet 3" />
+        <button onclick="mostrarDetalhes('Linha Diet 3')">EU QUERO</button>
+      </div>
+            <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/html/linhaDiet/bolo28.jpg" alt="Linha Diet 3" />
+        <button onclick="mostrarDetalhes('Linha Diet 4')">EU QUERO</button>
+      </div>
+            <div class="bolo">
+        <img class="Imagem" src="/Codigo/front/produtos/html/linhaDiet/bolo29.jpg" alt="Linha Diet 3" />
+        <button onclick="mostrarDetalhes('Linha Diet 5')">EU QUERO</button>
+      </div>
+    </div>
+  </section>
+
+<script>
+  function mostrarDetalhes(nome) {
+    // Salva o nome do bolo no localStorage e redireciona para a página principal
+    localStorage.setItem("boloSelecionado", nome);
+    window.location.href = "/Codigo/front/produtos/html/produtos.html"; // Certifique-se de que esse é o caminho correto
+  }
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bolos de Ganache</title>
-  <link rel="stylesheet" href="../produtos.css" />
+  <link rel="stylesheet" href="/Codigo/front/produtos/css/produtos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -28,38 +28,33 @@
     <h1>Bolos de Ganache</h1>
     <div class="lista-bolos">
       <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo13.jpg" alt="Bolo de Ganache 1" />
+        <img class="Imagem" src="/Codigo/front/produtos/html/ganache/bolo13.jpg" alt="Bolo de Ganache 1" />
         <button onclick="mostrarDetalhes('Ganache 1')">EU QUERO</button>
       </div>
       <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo14.jpg" alt="Bolo de Ganache 2" />
+        <img class="Imagem" src="/Codigo/front/produtos/html/ganache/bolo14.jpg" alt="Bolo de Ganache 2" />
         <button onclick="mostrarDetalhes('Ganache 2')">EU QUERO</button>
       </div>
       <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo15.jpg" alt="Bolo de Ganache 3" />
+        <img class="Imagem" src="/Codigo/front/produtos/html/ganache/bolo15.jpg" alt="Bolo de Ganache 3" />
         <button onclick="mostrarDetalhes('Ganache 3')">EU QUERO</button>
       </div>
             <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo16.jpg" alt="Bolo de Ganache 4" />
+        <img class="Imagem" src="/Codigo/front/produtos/html/ganache/bolo3.png" alt="Bolo de Ganache 5" />
         <button onclick="mostrarDetalhes('Ganache 4')">EU QUERO</button>
       </div>
             <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo3.png" alt="Bolo de Ganache 5" />
+        <img class="Imagem" src="/Codigo/front/produtos/html/ganache/bolo7.jpg" alt="Bolo de Ganache 6" />
         <button onclick="mostrarDetalhes('Ganache 5')">EU QUERO</button>
-      </div>
-            <div class="bolo">
-        <img class="Imagem" src="/Codigo/front/produtos/ganache/bolo7.jpg" alt="Bolo de Ganache 6" />
-        <button onclick="mostrarDetalhes('Ganache 6')">EU QUERO</button>
       </div>
     </div>
   </section>
 
 <script>
-  function mostrarDetalhes(nome) {
-    // Salva o nome do bolo no localStorage e redireciona para a página principal
-    localStorage.setItem("boloSelecionado", nome);
-    window.location.href = "/Codigo/front/produtos/produtos.html"; // Certifique-se de que esse é o caminho correto
-  }
+function mostrarDetalhes(nome) {
+  localStorage.setItem("boloSelecionado", nome);
+  window.location.href = "/Codigo/front/produtos/html/produtos.html"; // Confirme o caminho
+}
 </script>
 
 </body>

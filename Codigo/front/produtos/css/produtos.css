@@ -108,6 +108,14 @@ button:hover {
     content: '★';
 }
 
+.produtos-container .produto,
+.lista-bolos .bolo,
+.lista-doces .doces,
+.lista-data .data {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* Base image dimensions - applied to images that are NOT inside a carousel slide */
 .produto img,
 .bolo img,
