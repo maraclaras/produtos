@@ -114,20 +114,30 @@
         <header class="header-categorias">
             <h1>BOLOS</h1>
         </header>
-<div class="categorias">
-    <button onmouseover="mostrarPreview('ganache')" onmouseout="esconderPreview()" onclick="window.location.href ='./ganache/ganache.html'">GANACHE</button>
-    <button onmouseover="mostrarPreview('pasta')" onmouseout="esconderPreview()" onclick="window.location.href ='./pastaAmericana/pastaAmericana.html'">PASTA AMERICANA</button>
-    <button onmouseover="mostrarPreview('chantininho')" onmouseout="esconderPreview()" onclick="window.location.href ='./chantininho/chantininho.html'">CHANTININHO</button>
-    <button onmouseover="mostrarPreview('diet')" onmouseout="esconderPreview()" onclick="window.location.href ='./linhaDiet/linhaDiet.html'">LINHA DIET</button>
-    <button onclick="window.location.href = '../orcamento/orcamento.html'">CRIE SEU BOLO</button>
-</div>
-
-<div id="preview-bolo" class="preview-bolo hidden">
-    <img id="imagem-preview" src="" alt="Preview do bolo">
-</div>
+        <div class="categorias-imagens">
+            <div class="categoria-item" onclick="window.location.href ='./ganache/ganache.html'">
+                <img src="/Codigo/front/produtos/html/ganache/bolo15.jpg" alt="Ganache" />
+                <p>GANACHE</p>
+            </div>
+            <div class="categoria-item" onclick="window.location.href ='./pastaAmericana/pastaAmericana.html'">
+                <img src="/Codigo/front/produtos/html/pastaAmericana/bolo10.jpg" alt="Pasta Americana" />
+                <p>PASTA AMERICANA</p>
+            </div>
+            <div class="categoria-item" onclick="window.location.href ='./chantininho/chantininho.html'">
+                <img src="/Codigo/front/produtos/html/chantininho/bolo1.png" alt="Chantininho" />
+                <p>CHANTININHO</p>
+            </div>
+            <div class="categoria-item" onclick="window.location.href ='./linhaDiet/linhaDiet.html'">
+                <img src="/Codigo/front/produtos/html/linhaDiet/bolo21.jpg" alt="Linha Diet" />
+                <p>LINHA DIET</p>
+            </div>
+            <div class="categoria-item" onclick="window.location.href = 'Codigo/front/orcamento/orcamento.html'">
+                <img src="/Codigo/front/produtos/image/categorias/crie_seu_bolo.jpg" alt="Crie Seu Bolo" />
+                <p>CRIE SEU BOLO</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Página de Doces -->
     <section id="doces" class="hidden">
         <header class="header-categorias">
             <h1>DOCES</h1>
@@ -168,25 +178,24 @@
   </div>
 </section>
 
-    <section id="detalhes" class="hidden">
-        <header class="header-detalhes">
-            <h1 id="nome-bolo">NOME DO PRODUTO</h1>
-        </header>
-        <div class="detalhes-container">
-            <img src="https://via.placeholder.com/200" alt="Imagem do Produto" />
-            <div>
-                <p>DESCRIÇÃO DO PRODUTO</p>
-                <div class="estrelas" id="avaliacao">
-                    <span data-estrela="1">☆</span>
-                    <span data-estrela="2">☆</span>
-                    <span data-estrela="3">☆</span>
-                    <span data-estrela="4">☆</span>
-                    <span data-estrela="5">☆</span>
-                </div>
-     <button id="btn-adicionar-carrinho">ADICIONAR AO CARRINHO</button>
+<section id="detalhes" class="hidden">
+    <header class="header-detalhes">
+        <h1 id="nome-bolo">NOME DO PRODUTO</h1>
+    </header>
+    <div class="detalhes-container">
+        <img src="https://via.placeholder.com/200" alt="Imagem do Produto" />
+        <div>
+            <p id="detalhes-descricao">DESCRIÇÃO DO PRODUTO</p> <p id="detalhes-preco">Preço: R$ 0,00</p> <div class="estrelas" id="avaliacao">
+                <span data-estrela="1">☆</span>
+                <span data-estrela="2">☆</span>
+                <span data-estrela="3">☆</span>
+                <span data-estrela="4">☆</span>
+                <span data-estrela="5">☆</span>
             </div>
+            <button id="btn-adicionar-carrinho">ADICIONAR AO CARRINHO</button>
         </div>
-    </section>
+    </div>
+</section>
 
     <button
   id="btn-abrir-carrinho"
@@ -199,7 +208,6 @@
 
     <script src="/Codigo/front/produtos/js/produtos.js"></script>
         <script src="/Codigo/front/produtos/js/detalhes.js"></script>
-        <script src="/Codigo/front/produtos/js/preview.js"></script>
-</body>
+        </body>
 
 </html>

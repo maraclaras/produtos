@@ -72,7 +72,7 @@ button:hover {
     background-color: #3e4e50;
 }
 
-.categorias {
+.categorias { /* This styling might become obsolete, depending on how categories are displayed */
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -80,18 +80,91 @@ button:hover {
     margin-bottom: 2rem;
 }
 
+/* Styles for image-based categories */
+.categorias-imagens {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap between image categories */
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.categoria-item {
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px; /* Increased width for a more rectangular shape for the item container */
+    padding-bottom: 15px; /* Space below the image and text */
+}
+
+.categoria-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.categoria-item img {
+    width: 100%; /* Image fills the container width */
+    height: 160px; /* Adjusted height to make it more rectangular (width 280px, height 160px) */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.categoria-item p {
+    font-weight: bold;
+    color: #4d7373;
+    margin: 0;
+    padding: 0 10px; /* Padding for the text */
+}
+
+
 .detalhes-container {
     display: flex;
+    flex-direction: column; /* Changed to column for better stacking on smaller screens */
     gap: 2rem;
     padding: 2rem;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff; /* Added a background for the details box */
+    border-radius: 15px; /* Rounded corners for the details box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 800px; /* Max width for the container */
+    margin: 2rem auto; /* Center the container */
+    text-align: left; /* Align text within the container to left */
+}
+
+.detalhes-container img {
+    width: 350px; /* Kept current dimensions */
+    height: 350px; /* Kept current dimensions */
+    border-radius: 10px; /* Slightly rounded corners for image */
+    object-fit: cover;
+    margin-bottom: 1rem; /* Space below the image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
+}
+
+.detalhes-container > div { /* Target the div containing description and buttons */
+    padding: 1rem;
+    width: 100%; /* Ensure content takes full width of details container */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.detalhes-container p {
+    font-size: 1.1rem; /* Larger font size for description */
+    line-height: 1.6; /* Better line spacing */
+    color: #555; /* Slightly softer text color */
+    margin-bottom: 1.5rem; /* More space below description */
+    text-align: center; /* Center the description text */
 }
 
 .estrelas {
     font-size: 1.5rem;
     color: gold;
     margin: 1rem 0;
+    text-align: center; /* Center the stars */
 }
 
 .hidden {
@@ -120,12 +193,11 @@ button:hover {
 .produto img,
 .bolo img,
 .doces img,
-.data img,
-.detalhes-container img {
+.data img { /* These are general product images, not category images */
     display: block;
     margin: 0 auto 10px;
-    width: 250px; /* Base width */
-    height: 250px; /* Base height */
+    width: 300px; /* Reverted to more square/less rectangular */
+    height: 300px; /* Reverted to more square/less rectangular */
     object-fit: cover;
     border-radius: 8px;
 }
@@ -152,32 +224,13 @@ button:hover {
   background-color: #496666;
 }
 
-/* Preview image styling */
-.preview-bolo {
-    margin-top: 1rem;
-    text-align: center;
-    transition: opacity 0.3s ease;
-}
-
-.preview-bolo img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.preview-bolo.hidden {
-    display: none;
-}
-
 /* CAROUSEL BASE STYLES - INCREASED SIZE */
 .bolo-carousel-container,
 .doces-carousel-container,
 .datas-carousel-container {
     position: relative;
-    width: 300px; /* Increased width for carousel images */
-    height: 300px; /* Increased height for carousel images */
+    width: 350px; /* Reverted to original dimensions */
+    height: 350px; /* Reverted to original dimensions */
     margin: 0 auto 10px;
     overflow: hidden;
     border-radius: 8px;
@@ -272,4 +325,15 @@ button:hover {
 .doces-carousel-dots .dot.active,
 .datas-carousel-dots .dot.active {
     background-color: #5f8f8f;
+}
+
+/* Responsive adjustments for details page */
+@media (min-width: 768px) {
+    .detalhes-container {
+        flex-direction: row; /* Back to row layout on larger screens */
+        text-align: left;
+    }
+    .detalhes-container > div {
+        text-align: left; /* Align text within the div to left on larger screens */
+    }
 }

@@ -24,8 +24,7 @@
     </div>
   </header>
 
-  <section >
-    <h1>Bolos de Chantininho</h1>
+  <section id="bolos-chantininho"> <h1>Bolos de Chantininho</h1>
     <div class="lista-bolos">
       <div class="bolo">
         <img class="Imagem" src="/Codigo/front/produtos/html/chantininho/bolo6.jpg" alt="Bolo de Chantininho 1" />
@@ -48,17 +47,37 @@
         <button onclick="mostrarDetalhes('Chantininho 5')">EU QUERO</button>
       </div>
     </div>
-  </section>
+    <button onclick="window.location.href = '../produtos.html';">← Voltar para Produtos</button> </section>
 
+<section id="detalhes" class="hidden">
+    <header class="header-detalhes">
+        <h1 id="nome-bolo">NOME DO PRODUTO</h1>
+    </header>
+    <div class="detalhes-container">
+        <img src="https://via.placeholder.com/200" alt="Imagem do Produto" />
+        <div>
+            <p id="detalhes-descricao">DESCRIÇÃO DO PRODUTO</p> <p id="detalhes-preco">Preço: R$ 0,00</p> <div class="estrelas" id="avaliacao">
+                <span data-estrela="1">☆</span>
+                <span data-estrela="2">☆</span>
+                <span data-estrela="3">☆</span>
+                <span data-estrela="4">☆</span>
+                <span data-estrela="5">☆</span>
+            </div>
+            <button id="btn-adicionar-carrinho">ADICIONAR AO CARRINHO</button>
+        </div>
+    </div>
+</section>
+
+<script src="/Codigo/front/produtos/js/detalhes.js"></script>
+<script src="/Codigo/front/produtos/js/produtos.js"></script>
 <script>
-  function mostrarDetalhes(nome) {
-    // Salva o nome do bolo no localStorage e redireciona para a página principal
-    localStorage.setItem("boloSelecionado", nome);
-    window.location.href = "/Codigo/front/produtos/html/produtos.html"; // Certifique-se de que esse é o caminho correto
-  }
+document.addEventListener("DOMContentLoaded", function() {
+    const boloSelecionado = localStorage.getItem("boloSelecionado");
+    if (boloSelecionado) {
+        mostrarDetalhes(boloSelecionado);
+        localStorage.removeItem("boloSelecionado"); // Clear after use
+    }
+});
 </script>
-    
-
-
 </body>
 </html>
