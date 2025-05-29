@@ -84,7 +84,7 @@ button:hover {
 .categorias-imagens {
     display: flex;
     justify-content: center;
-    gap: 1.5rem; /* Increased gap between image categories */
+    gap: 2.5rem; /* Increased gap between image categories for more breathing room */
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
@@ -96,7 +96,7 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 280px; /* Increased width for a more rectangular shape for the item container */
+    width: 350px; /* Further increased width for a larger rectangular shape */
     padding-bottom: 15px; /* Space below the image and text */
 }
 
@@ -107,7 +107,7 @@ button:hover {
 
 .categoria-item img {
     width: 100%; /* Image fills the container width */
-    height: 160px; /* Adjusted height to make it more rectangular (width 280px, height 160px) */
+    height: 200px; /* Adjusted height to maintain rectangular ratio with new width */
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
